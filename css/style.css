@@ -99,11 +99,6 @@ h6,
     box-shadow: inset 0 0 0 0 var(--secondary);
 }
 
-.btn-square {
-    width: 36px;
-    height: 36px;
-}
-
 .btn-sm-square {
     width: 30px;
     height: 30px;
@@ -534,6 +529,13 @@ h6,
     background: rgba(183, 217, 255, 0.6);
 }
 
+.services-home {
+    /*background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), 
+                url('../img/prj.jpg') no-repeat center center / cover;*/
+    background: url('../img/project4.jpg') no-repeat center center / cover;
+    background-attachment: fixed;
+    position: relative;
+}
 
 /*** Project ***/
 .project-item {
@@ -693,7 +695,7 @@ h6,
     overflow-x: scroll;
     gap: 1rem;
     scroll-snap-type: x mandatory;
-    padding-bottom: 1rem;
+    padding: 0 1rem;
     scroll-behavior: smooth;
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
     scrollbar-width: none;  /* Firefox */
@@ -717,13 +719,14 @@ h6,
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s;
+    margin: 1em;
 }
 .carousel-btn:hover {
     background-color: #0056b3;
 }
 .project-item {
-    min-width: 250px;
-    max-height: 35em;
+    width: 30em;
+    height: 25em;
     flex-shrink: 0;
     position: relative;
     scroll-snap-align: start;
@@ -746,7 +749,7 @@ h6,
 }
 .project-item img {
     width: 100%;
-    height: 25em;
+    height: 15em;
 }
 
 /* Custom button styles */
@@ -755,15 +758,21 @@ h6,
     height: 40px;
     display: inline-block;
     text-align: center;
-    line-height: 40px;
+    line-height: 1.8em;
     border-radius: 50%;
 }
 
-/* Smooth scroll behavior */
-.project-carousel {
-    scroll-behavior: smooth;
+.carousel-controls {
+    position: relative;
 }
 
+#project-prev-btn {
+    left: -60px; /* Adjust as needed */
+}
+
+#project-next-btn {
+    right: -60px; /* Adjust as needed */
+}
 /* Custom animation styles */
 @keyframes fadeIn {
     0% { opacity: 0; }
@@ -795,16 +804,6 @@ h6,
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional styling */
 }
 
-.carousel-btn {
-    background-color: #007bff; /* Button color */
-    color: white; /* Button text color */
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
 .carousel-btn:hover {
     background-color: #0056b3; /* Darker button color on hover */
 }
@@ -814,3 +813,45 @@ h6,
     cursor: not-allowed;
 }
 
+.featured-projects-section {
+    padding: 0 0 3em;
+}
+
+.featured-project-item {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+.featured-project-item img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.sponsored-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #ff4c60;
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    border-radius: 5px;
+}
+
+.card-body h5 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-body p {
+    font-size: 1rem;
+    color: #6c757d;
+}

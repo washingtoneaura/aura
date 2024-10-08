@@ -74,7 +74,60 @@
         return false;
     });
 
-    // Carousel Scroll Functionality (Optional)
+    document.addEventListener('DOMContentLoaded', function() {
+        // Lightbox Replacement: Simple Image Modal
+        const overlay = document.createElement('div');
+        overlay.id = 'image-overlay';
+        overlay.style.display = 'none';
+        document.body.appendChild(overlay);
+
+        // Attach event listeners to all view icons
+        document.querySelectorAll('.project-item a.prj-img').forEach((el) => {
+            el.addEventListener('click', function (e) {
+                e.preventDefault();  // Prevent default link behavior
+
+                // Get the image href from the anchor tag
+                const imgSrc = this.getAttribute('href');  
+
+                // Create the lightbox content with the image and a close button
+                overlay.innerHTML = `
+                    <div style="position: relative; display: inline-block; max-width: 60%; max-height: 60%; margin: auto; border-radius: 10px;">
+                        <img src="${imgSrc}" style="width: 100%; height: auto; border-radius: 10px;">
+                        <button id="close-lightbox" style="position: absolute; top: -0.5em; right: -0.9em; background: none; border: none; font-size: 2.5em; color: white; cursor: pointer;">&times;</button>
+                    </div>
+                `;
+
+                // Set overlay styles to display the image with a dimmed background
+                overlay.style.display = 'flex';  
+                overlay.style.justifyContent = 'center';  // Center image horizontally
+                overlay.style.alignItems = 'center';  // Center image vertically
+                overlay.style.position = 'fixed';  // Fix to viewport
+                overlay.style.top = '0';
+                overlay.style.left = '0';
+                overlay.style.width = '100%';
+                overlay.style.height = '100%';
+                overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';  // Background dimming
+                overlay.style.zIndex = '1000';  // Ensure overlay is on top
+
+                // Prevent scrolling while the lightbox is open
+                document.body.style.overflow = 'hidden';  
+
+                 // Close the overlay when the close button is clicked
+                document.getElementById('close-lightbox').addEventListener('click', () => {
+                    overlay.style.display = 'none';
+                    document.body.style.overflow = 'auto';  // Restore scrolling
+                });
+            });
+        });
+
+        // Close the overlay when clicking outside the image
+        overlay.addEventListener('click', () => {
+            overlay.style.display = 'none';
+            document.body.style.overflow = 'auto';  // Restore scrolling
+        });
+    });
+
+    // Projects Carousel Scroll Functionality
     const projectCarousel = document.querySelector('.project-carousel');
     
     if (projectCarousel) {
@@ -102,75 +155,48 @@
             const x = e.pageX - projectCarousel.offsetLeft;
             const walk = (x - startX) * 2; // Scroll-fast multiplier
             projectCarousel.scrollLeft = scrollLeft - walk;
-        });
-    }
+        });   
 
-    // Lightbox Replacement: Simple Image Modal
-    const overlay = document.createElement('div');
-    overlay.id = 'image-overlay';
-    overlay.style.display = 'none';
-    document.body.appendChild(overlay);
+        // JavaScript for controlling the scroll behavior
+        const projectNextBtn = document.getElementById('project-next-btn');
+        const projectPrevBtn = document.getElementById('project-prev-btn');
 
-    document.querySelectorAll('.project-item a.fa-eye').forEach((el) => {
-        el.addEventListener('click', function (e) {
-            e.preventDefault();
-            const imgSrc = this.getAttribute('href');
-            overlay.innerHTML = `<img src="${imgSrc}" style="max-width: 90%; max-height: 90%; margin: auto; display: block;">`;
-            overlay.style.display = 'flex';
-            overlay.style.justifyContent = 'center';
-            overlay.style.alignItems = 'center';
-            overlay.style.position = 'fixed';
-            overlay.style.top = '0';
-            overlay.style.left = '0';
-            overlay.style.width = '100%';
-            overlay.style.height = '100%';
-            overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
-        });
-    });
-
-    overlay.addEventListener('click', () => {
-        overlay.style.display = 'none';
-    });
-
-    // JavaScript for controlling the scroll behavior
-    const projectNextBtn = document.getElementById('project-next-btn');
-    const projectPrevBtn = document.getElementById('project-prev-btn');
-
-    if (projectCarousel && projectNextBtn && projectPrevBtn) {
-         // Update: dynamically calculate the remaining scrollable area
-         projectNextBtn.addEventListener('click', () => {
-             // Get the total scrollable width
+        const updateButtonState = () => {
             const maxScrollLeft = projectCarousel.scrollWidth - projectCarousel.clientWidth;
-            // Calculate the remaining scrollable distance
-            const remainingScroll = maxScrollLeft - projectCarousel.scrollLeft;
-            // Set scrollAmount to either 300 or the remaining scroll
-            const scrollAmount = Math.min(300, remainingScroll);
-            
-            // Scroll the carousel
-            projectCarousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
 
-            // Optional: Disable next button if we reach the end
-            if (remainingScroll <= 0) {
-                projectNextBtn.disabled = true; // Disable next button if at end
-            } else {
-                projectNextBtn.disabled = false; // Re-enable if not at end
-            }
-        });
+            // Disable or enable buttons based on the scroll position
+            projectPrevBtn.disabled = projectCarousel.scrollLeft <= 0;
+            projectNextBtn.disabled = projectCarousel.scrollLeft >= maxScrollLeft;
+        };
 
-        projectPrevBtn.addEventListener('click', () => {
-            // Calculate how much to scroll back
-            const scrollAmount = Math.min(300, projectCarousel.scrollLeft);
-            
-            // Scroll the carousel back
-            projectCarousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        if (projectCarousel && projectNextBtn && projectPrevBtn) {
+            // Initialize button states on page load
+            updateButtonState();
 
-            // Optional: Disable previous button if at start
-            if (projectCarousel.scrollLeft <= 0) {
-                projectPrevBtn.disabled = true; // Disable prev button if at start
-            } else {
-                projectPrevBtn.disabled = false; // Re-enable if not at start
-            }
-        });
+            // Update: dynamically calculate the remaining scrollable area
+            projectNextBtn.addEventListener('click', () => {
+                // Get the total scrollable width
+                const maxScrollLeft = projectCarousel.scrollWidth - projectCarousel.clientWidth;
+                // Calculate the remaining scrollable distance
+                const remainingScroll = maxScrollLeft - projectCarousel.scrollLeft;
+                // Set scrollAmount to either 300 or the remaining scroll
+                const scrollAmount = Math.min(600, remainingScroll);
+                
+                // Scroll the carousel
+                projectCarousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            });
+
+            projectPrevBtn.addEventListener('click', () => {
+                // Calculate how much to scroll back
+                const scrollAmount = Math.min(600, projectCarousel.scrollLeft);
+                
+                // Scroll the carousel back
+                projectCarousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            });
+
+            // Update button state when the user scrolls
+            projectCarousel.addEventListener('scroll', updateButtonState);
+        }
     }    
 
     // Testimonials carousel
