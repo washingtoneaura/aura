@@ -537,6 +537,12 @@ h6,
     position: relative;
 }
 
+.quote-home {
+    /*background: linear-gradient(rgba(127, 140, 160, 0.7), rgba(9, 30, 62, .7)), url('../img/scratch2.jpeg') no-repeat center center / cover;*/
+    background-attachment: fixed;
+    position: relative;
+}
+
 /*** Project ***/
 .project-item {
     position: relative;
