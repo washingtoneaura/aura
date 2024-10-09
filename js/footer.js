@@ -10,9 +10,10 @@ document.write(`
                             <h1 class="m-0 text-white"><i class="fa fa-user-tie me-2"></i>Aura</h1>
                         </a>
                         <p class="mt-3 mb-4">If You Have Any Query, Feel Free To Contact Me</p>
-                        <form action="">
+                        <form action="https://formspree.io/f/mnnqawry" method="POST">
+                            <input type="hidden" name="form_name" value="get_in_touch_form">
                             <div class="input-group">
-                                <input type="text" class="form-control border-white p-3" placeholder="Your Email">
+                                <input type="text" name="email" class="form-control border-white p-3" placeholder="Your Email" required>
                                 <button class="btn btn-dark">Sign Up</button>
                             </div>
                         </form>
