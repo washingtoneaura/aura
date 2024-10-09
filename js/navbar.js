@@ -22,20 +22,21 @@ document.addEventListener('DOMContentLoaded', function() {
                         <a href="about.html" class="nav-item nav-link">About</a>
                         <a href="services.html" class="nav-item nav-link">Services</a>
                         <a href="projects.html" class="nav-item nav-link">Projects</a>
-                        <div class="nav-item dropdown">
+                        <a href="blog.html" class="nav-item nav-link">Blogs</a>
+                        <!--<div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Blog</a>
                             <div class="dropdown-menu m-0">
                                 <a href="blog.html" class="dropdown-item">Blog Grid</a>
                                 <a href="detail.html" class="dropdown-item">Blog Detail</a>
                             </div>
-                        </div>
+                        </div>-->
                         <div class="nav-item dropdown dp2">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Resources</a>
                             <div class="dropdown-menu m-0">
-                                <a href="price.html" class="dropdown-item">Pricing Plan</a>
+                                <!--<a href="price.html" class="dropdown-item">Pricing Plan</a>-->
                                 <a href="feature.html" class="dropdown-item">My features</a>
-                                <a href="team.html" class="dropdown-item">Team Members</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                                <!--<a href="team.html" class="dropdown-item">Team Members</a>-->
+                                <!--<a href="testimonial.html" class="dropdown-item">Testimonial</a>-->
                                 <a href="quote.html" class="dropdown-item">Free Quote</a>
                             </div>
                         </div>
@@ -88,10 +89,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }  
 
         // Initially set the dropdown toggle as active if the current page matches
-        var blogDropdownToggle = document.querySelector('.nav-item.dropdown .nav-link.dropdown-toggle');
+        /*var blogDropdownToggle = document.querySelector('.nav-item.dropdown .nav-link.dropdown-toggle');
         if (blogDropdownToggle && (currentPage === 'blog' || currentPage === 'detail')) {
             setActiveLink(blogDropdownToggle);
-        }
+        }*/
 
         var pagesDropdownToggle = document.querySelector('.nav-item.dropdown.dp2 .nav-link.dropdown-toggle');
         if (pagesDropdownToggle && (currentPage === 'price' || currentPage === 'feature' || currentPage === 'team' || currentPage === 'testimonial' || currentPage === 'quote')) {

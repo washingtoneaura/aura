@@ -82,7 +82,7 @@
         document.body.appendChild(overlay);
 
         // Attach event listeners to all view icons
-        document.querySelectorAll('.project-item a.prj-img').forEach((el) => {
+        document.querySelectorAll('.project-item a.prj-img, .portfolio-item a.ptf-img').forEach((el) => {
             el.addEventListener('click', function (e) {
                 e.preventDefault();  // Prevent default link behavior
 

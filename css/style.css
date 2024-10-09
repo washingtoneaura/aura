@@ -861,3 +861,52 @@ h6,
     font-size: 1rem;
     color: #6c757d;
 }
+
+.position-relative {
+    position: relative;
+}
+
+.arrow-down {
+    position: absolute;
+    left: 50%; /* Center the arrow */
+    top: 100%; /* Place it right below the first card */
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #007bff; /* Arrow color */
+    margin-top: -4px; /* Adjust this value to align the arrow properly */
+}
+
+.arrow-up {
+    font-size: 2rem; /* Adjust size as needed */
+    color: #007bff; /* Arrow color */
+    margin-top: -0.9em; /* Adjust this value to position the arrow vertically */
+    margin-bottom: -0.5em;
+}
+
+.arrow2-up {
+    position: relative;
+    width: 0;
+    height: 0;
+    margin: 0 auto;
+    border-left: 30px solid transparent; /* Left wing of the arrow */
+    border-right: 30px solid transparent; /* Right wing of the arrow */
+    border-bottom: 30px solid #007bff; /* Arrow color */
+    transform: translateY(-50%); /* Adjust this value to align the arrow properly */
+    animation: pulse 1s infinite; /* Optional: Add a pulsing effect */
+    margin-top: -0.5em;
+    margin-bottom: -0.5em;
+}
+
+/* Optional: Add a pulsing effect to the arrow 
+@keyframes pulse {
+    0%, 100% {
+        transform: translateY(-50%) scale(1);
+    }
+    50% {
+        transform: translateY(-50%) scale(1.1);
+    }
+}*/
+
