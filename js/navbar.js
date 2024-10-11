@@ -34,10 +34,10 @@ document.addEventListener('DOMContentLoaded', function() {
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Resources</a>
                             <div class="dropdown-menu m-0">
                                 <!--<a href="price.html" class="dropdown-item">Pricing Plan</a>-->
-                                <a href="feature.html" class="dropdown-item">My features</a>
                                 <!--<a href="team.html" class="dropdown-item">Team Members</a>-->
                                 <!--<a href="testimonial.html" class="dropdown-item">Testimonial</a>-->
                                 <a href="quote.html" class="dropdown-item">Free Quote</a>
+                                <a class="dropdown-item">My features</a>
                             </div>
                         </div>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>

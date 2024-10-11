@@ -536,6 +536,23 @@ h6,
     background-attachment: fixed;
     position: relative;
 }
+.services-pg{
+    background: url('../img/python2.jpg') no-repeat center center / cover;
+    background-attachment: fixed;
+    margin-top: -90px;
+    padding: 8em 0 8em 0 !important;
+}
+
+.services-starts{
+    padding-top: 5em !important;
+    padding-bottom: 5em !important;
+}
+
+.services-pg h3{
+    background-color: rgba(183, 217, 255, 0.6); 
+    padding: 10px;        
+    border-radius: 5px;
+}
 
 .quote-home {
     /*background: linear-gradient(rgba(127, 140, 160, 0.7), rgba(9, 30, 62, .7)), url('../img/scratch2.jpeg') no-repeat center center / cover;*/
