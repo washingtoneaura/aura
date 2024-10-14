@@ -245,12 +245,10 @@ h6,
 
 
 /*** Section Title ***/
-/*
 .section-title h1 {
     position: relative;
     display: inline-block;
-    padding: 0 60px;
-}*/
+}
 
 .section-title.text-start h1 {
     padding-left: 0;
@@ -284,15 +282,18 @@ h6,
     content: "";
     width: 150px;
     height: 5px;
-    left: 0;
     bottom: 0;
     background: var(--primary);
     border-radius: 2px;
-}*/
+}
+
+.section-title:not(.text-center)::before {
+    left: 0; /* Left-align the line */
+}
 
 .section-title.text-center::before {
-    left: 50%;
-    margin-left: -75px;
+    left: 50%; /* Center the line */
+    transform: translateX(-50%);
 }
 
 .section-title.section-title-sm::before {
