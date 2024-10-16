@@ -928,3 +928,99 @@ h6,
     }
 }*/
 
+#video-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#video-section h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #333;
+}
+
+iframe, video {
+    border: 2px solid #eaeaea;
+    border-radius: 8px;
+}
+
+.advertisement-section {
+    background-color: #f9f9f9;
+    padding: 80px 0 80px 0;
+    border-radius: 8px;
+    text-align: center;
+    margin: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.advertisement-image {
+    width: 100%; /* Makes the image full width */
+    max-width: 600px; /* Limits the max width */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 8px; /* Rounded corners */
+    margin: 20px 0; /* Space above and below the image */
+}
+
+.advertisement-video {
+    width: 100%; /* Makes the video full width */
+    max-width: 600px; /* Limits the max width */
+    border-radius: 8px; /* Rounded corners */
+    margin: 20px 0; /* Space above and below the video */
+}
+
+.advertisement-section h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.advertisement-section p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.advertisement-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.advertisement-section li {
+    margin: 5px 0;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+.advertisement-container {
+    display: flex; /* Align items in a row */
+    align-items: flex-start; /* Align items at the start */
+    justify-content: flex-space; /* Align items to the left */
+    padding: 5px 200px 5px 200px; /* Adjust padding as necessary */
+}
+
+.image-container {
+    margin-right: 50px; /* Space between the image and video */
+}
+
+.ad-video-container {
+    position: relative;
+    width: 100%; /* Make it responsive */
+    max-width: 600px; /* Optional max-width for the video */
+    margin-top: 60px; /* Space above the video to position it below the image */
+}
+
+.ad-video-container iframe {
+    width: 100%; /* Ensure the iframe takes full width of its container */
+    height: 315px; /* Set a fixed height for the video */
+    border: none; /* Remove border */
+}
