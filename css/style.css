@@ -981,11 +981,32 @@ iframe, video {
 .advertisement-section ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
 }
 
 .advertisement-section li {
-    margin: 5px 0;
+    margin: 10px 400px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
+
+.advertisement-section li i {
+    margin-right: 15px;
+    font-size: 1.2em;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.advertisement-section li:hover i {
+    color: white;
+}
+
 
 .cta-button {
     display: inline-block;
