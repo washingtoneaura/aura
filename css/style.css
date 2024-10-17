@@ -954,11 +954,11 @@ iframe, video {
 }
 
 .advertisement-image {
-    width: 100%; /* Makes the image full width */
-    max-width: 600px; /* Limits the max width */
-    height: auto; /* Maintains aspect ratio */
-    border-radius: 8px; /* Rounded corners */
-    margin: 20px 0; /* Space above and below the image */
+    width: 100%;
+    max-width: 600px; 
+    height: auto; 
+    border-radius: 8px; 
+    margin: 20px 0; 
 }
 
 .advertisement-video {
