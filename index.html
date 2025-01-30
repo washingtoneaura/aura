@@ -345,36 +345,56 @@
     </div>-->
     <!-- Pricing Plan End -->
 
-    <section id="inventory-advertisement" class="advertisement-section">
-        <h2>Introducing A New Inventory System</h2>
-        <p>
+    <div id="inventory-advertisement" class="advertisement-section" style="background-color: #bfcbd7; padding: 50px 0; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center;">
+        <!-- Heading Section with Animation -->
+        <h2 style="color: #e63946; font-size: 36px; font-weight: bold; text-transform: uppercase; animation: fadeIn 2s ease-out;">Introducing A New Inventory System</h2>
+        <h4 style="color: #333; font-size: 22px; font-weight: normal; line-height: 1.6; margin: 40px; ">
             Streamline your operations with my cutting-edge inventory management system. 
             Track stock levels, manage orders, and analyze performance with ease.
-        </p>
-
-        <div class="advertisement-container pt-5">
-            <div class="image-container">    
-                <img src="img/inventory1.png" alt="Inventory System Screenshot" class="advertisement-image">
+        </h4>
+    
+        <!-- Advertisement Container with Flexbox Layout -->
+        <div class="advertisement-container pt-5" style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; margin-top: 30px;">
+            <div class="image-container" style="flex: 1; padding: 10px;">
+                <img src="img/inventory1.png" alt="Inventory System Screenshot" class="advertisement-image" style="width: 100%; height:100%; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.2); transition: transform 0.3s ease-in-out;">
             </div>
-            <div class="ad-video-container">
-                <iframe 
-                    src="https://www.youtube.com/embed/zZOTkiP-yOs?autoplay=1&mute=1" 
-                    title="YouTube video player" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
+    
+            <!-- Video Section with Fancy Border -->
+            <div class="video-container" style="flex: 1; padding: 10px; max-width: 560px;">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/zZOTkiP-yOs?autoplay=1&mute=1" 
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+                    encrypted-media; gyroscope; picture-in-picture" allowfullscreen 
+                    style="border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: transform 0.3s ease-in-out;">
                 </iframe>
             </div>
         </div>
-             
-        <ul>
-            <li><i class="fas fa-chart-line"></i> Real-time stock tracking</li>
-            <li><i class="fas fa-tasks"></i> Easy order management</li>
-            <li><i class="fas fa-chart-pie"></i> Detailed reporting and analytics</li>
-            <li><i class="fas fa-desktop"></i> User-friendly interface</li>
+    
+        <!-- Features List with Icons and Hover Effects -->
+        <ul style="list-style: none; padding-left: 0; margin-top: 30px; display: flex; flex-wrap: wrap; justify-content: center;">
+            <li style="font-size: 18px; color: #333; margin: 15px; display: flex; align-items: center; transition: color 0.3s;">
+                <i class="fas fa-chart-line" style="color: #e63946; margin-right: 10px;"></i>
+                Real-time stock tracking
+            </li>
+            <li style="font-size: 18px; color: #333; margin: 15px; display: flex; align-items: center; transition: color 0.3s;">
+                <i class="fas fa-tasks" style="color: #e63946; margin-right: 10px;"></i>
+                Easy order management
+            </li>
+            <li style="font-size: 18px; color: #333; margin: 15px; display: flex; align-items: center; transition: color 0.3s;">
+                <i class="fas fa-chart-pie" style="color: #e63946; margin-right: 10px;"></i>
+                Detailed reporting and analytics
+            </li>
+            <li style="font-size: 18px; color: #333; margin: 15px; display: flex; align-items: center; transition: color 0.3s;">
+                <i class="fas fa-desktop" style="color: #e63946; margin-right: 10px;"></i>
+                User-friendly interface
+            </li>
         </ul>
-        <a href="https://github.com/washingtoneaura?tab=repositories" target="_blank" rel="noopener" class="cta-button">Learn More</a>
-    </section>
+    
+        <!-- Call to Action Button with Hover Effect -->
+        <a href="https://aura-inventory.up.railway.app/" target="_blank" rel="noopener" class="btn btn-primary" 
+            style="padding: 12px 30px; background-color: #e63946; color: white; font-size: 18px; border-radius: 50px; transition: background-color 0.3s ease, transform 0.3s ease;">
+            Click here for a 14-day All Free Features Trial!
+        </a>
+    </div>
 
 
     <!-- Project Start -->
@@ -411,7 +431,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Aura Inventory</h5>
                             <p class="card-text">Web-based inventory solution with real-time tracking, automated alerts, and seamless integration. Built with Laravel and SQL smarter, more efficient stock management.</p>
-                            <a href="https://github.com/washingtoneaura/inventory-system" target="_blank" class="btn btn-primary">Learn More</a>
+                            <a href="https://aura-inventory.up.railway.app" target="_blank" class="btn btn-primary">Learn More</a>
                         </div>
                     </div>
                 </div>
