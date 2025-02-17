@@ -1045,3 +1045,74 @@ iframe, video {
     height: 315px; /* Set a fixed height for the video */
     border: none; /* Remove border */
 }
+
+
+.header-margin {
+    margin-bottom: 90px;
+}
+
+.icon-bg {
+    background-color: #007bff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+.icon-bg i {
+    color: white;
+}
+
+/* About Section */
+.about-image {
+    min-height: 500px;
+    position: relative;
+}
+
+.about-image img {
+    object-fit: cover;
+}
+
+/* Section Title */
+.title-max-width {
+    max-width: 600px;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Remove default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Features Section */
+.feature-icon {
+    background-color: #007bff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.feature-image {
+    min-height: 350px;
+    position: relative;
+}
+
+.feature-image img {
+    object-fit: cover;
+}
